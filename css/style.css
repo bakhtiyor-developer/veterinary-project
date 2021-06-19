@@ -1,0 +1,354 @@
+html {
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-color: #78C0DE;
+    --orange-color: #FFBD54;
+    --white-color: #fff;
+    --std-text-color: #333333;
+    --gray-opacity: #949494;
+}
+
+*,
+*::before,
+*::after {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #ececec;
+    font-family: 'Roboto', sans-serif;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.container {
+    width: 1350px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-address {
+    padding: 13px 0px;
+}
+
+.no-type {
+    list-style-type: none;
+}
+
+.h-address-list {
+    margin-left: auto;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.h-address-link {
+    color: var(--std-text-color);
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.h-address-link:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+.h-home-address {
+    padding-left: 23px;
+}
+
+.h-home-address::before {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0%;
+    width: 14px;
+    height: 13px;
+    transform: translateY(-50%);
+    background-image: url('../img/h-home.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+}
+
+.h-phones-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.h-phones-item:first-child {
+    position: relative;
+    z-index: 1;
+    padding-left: 22px;
+}
+
+.h-phones-item {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.h-phones-item:not(:first-child)::before {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: -12px;
+    width: 4px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    height: 4px;
+    background-color: #FFBD54;
+    content: "";
+}
+
+.h-phones-item:first-child::before {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    z-index: 2;
+    width: 13px;
+    height: 13px;
+    transform: translateY(-50%);
+    background-image: url('../img/h-phone.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+}
+
+.h-phones-item:not(:last-child) {
+    margin-right: 22px;
+}
+
+.h-weekday-item:first-child {
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+}
+
+.h-weekday-item:not(:last-child) {
+    margin-right: 22px;
+}
+
+.h-weekday-item:first-child::before {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    z-index: 2;
+    width: 11px;
+    height: 8px;
+    transform: translateY(-50%);
+    background-image: url('../img/h-building.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+}
+
+
+
+/* NAVBAR */
+
+.navbar-box {
+    background-color: var(--white-color);
+}
+
+.navbar__logo {
+    width: 177px;
+    height: 86px;
+    display: block;
+}
+
+.navbar__logo--img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.navbar__item:not(:first-child) {
+    margin-left: 55px;
+}
+
+.navbar__active--link {
+    padding-left: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar__active--link::before {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background-image: url('../img/active.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+}
+
+.navbar__link, .navbar__q--link {
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--std-text-color);
+}
+
+.navbar__link:hover, .navbar__q--link:hover {
+    color: goldenrod;
+}
+
+.navbar__q--link {
+    padding-left: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar__q--link::before {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 23px;
+    height: 20px;
+    background-image: url('../img/pet.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+}
+
+
+
+
+
+/* HERO */
+
+.hero__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero__img--box {
+    position: relative;
+    z-index: 1;
+    width: 570px;
+    height: 570px;
+}
+
+.hero__mouse, .hero__cat, .hero__dog, .hero__rabit {
+    position: absolute;
+}
+
+.hero__mouse {
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.hero__rabit {
+    bottom: 0;
+    left: 44%;
+    z-index: 4;
+    transform: translateX(-50%);
+}
+
+.hero__cat {
+    right: 40px;
+    bottom: 10px;
+    z-index: 3;
+}
+
+.hero__dog {
+    left: -55px;
+    bottom: 0;
+}
+
+
+.hero__content--span {
+    display: block;
+    margin-bottom: 29px;
+}
+
+.hero__title {
+    color: var(--std-text-color);
+    margin: 0;
+    width: 608px;
+    font-size: 70px;
+}
+
+.hero__title--blue {
+    color: var(--blue-color);
+}
+
+.hero__title--desc {
+    word-spacing: 5px;
+    color: var(--gray-opacity);
+    font-size: 16px;
+    line-height: 21px;
+    width: 495px;
+    margin-bottom: 38px;
+}
+
+.std__btn--style {
+    transition: 0.3s;
+    width: 181px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--std-text-color);
+    font-size: 16px;;
+    color: var(--white-color);
+}
+
+.std__btn--style:hover {
+    width: 200px;  
+    justify-content: space-between;
+    padding-left: 25px;
+}
+
+.std__btn--style:hover .hero__btn--arrow {
+    display: block;
+}
+
+.hero__btn--arrow {
+    display: none;
+    width: 80px;
+    height: 30px;
+}
+
